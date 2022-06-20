@@ -1,0 +1,14 @@
+nav{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+
+}
+
