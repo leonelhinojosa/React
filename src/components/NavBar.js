@@ -1,7 +1,8 @@
 import React from "react"
 //import './NavBar.css'
-import logo from '../components/logo.jpg'
+import logo from '../assets/logo.jpg'
 import ItemListContainer from '../Containers/ItemListContainer'
+import Cartwidget from '../components/cartWidget/CartWidget'
 
 
 
@@ -17,6 +18,7 @@ const NavBar = () => {
                 <a style={styles.navStyle}href="inicio">Inicio</a>
                 <a style={styles.navStyle}href="ofertas">Ofertas</a>
                 <a style={styles.navStyle}href="consultas">Consultas</a>
+                <Cartwidget />
             </nav>
             
             <ItemListContainer  numeroTelefono= '1128054858' comprarJuego={comprar}/>
@@ -37,7 +39,7 @@ const styles = {
         color: '#000',
         textDecoration: 'none',
         display: 'flex',
-        justifyContent: 'space-evenly',
+        justifyContent: 'space-between',
         alignItems: 'center',
     
     },
