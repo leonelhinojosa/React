@@ -1,5 +1,5 @@
 import React from "react"
-
+import  ItemCount  from './ItemCount'
 const Datos = ({ numeroTelefono, comprarJuego}) => {
 
     return (
@@ -9,8 +9,9 @@ const Datos = ({ numeroTelefono, comprarJuego}) => {
           
            <a style={styles.navStyle}>
 
-           <button  onClick={comprarJuego}>Comprar</button>
+           
            </a>
+           
            
         </>
     )

@@ -1,19 +1,21 @@
 import React from "react"
 //import './NavBar.css'
 import logo from '../assets/logo.jpg'
-import ItemListContainer from '../Containers/ItemListContainer'
-import Cartwidget from '../components/cartWidget/CartWidget'
-
+import ItemListContainer from '../components/ItemListContainer'
+import Cartwidget from '../components/CartWidget'
+import  ItemCount  from '../components/ItemCount'
 
 
 const NavBar = () => {
-
-    const comprar = () => console.log ('seguir comprando')
+    
+      const onAdd = (mensaje) => {
+        alert("Muchas gracias por tu compra")
+        console.log(mensaje)}
+    
     return (
         <>
            
             <img style={styles.imagen} src={logo} alt="" />
-            <h1 style={styles.Tittle}> Ventas de juegos de PS3/PS4/XBOX </h1>
             <nav style={styles.navStyle}>
                 <a style={styles.navStyle}href="inicio">Inicio</a>
                 <a style={styles.navStyle}href="ofertas">Ofertas</a>
@@ -21,9 +23,12 @@ const NavBar = () => {
                 <Cartwidget />
             </nav>
             
-            <ItemListContainer  numeroTelefono= '1128054858' comprarJuego={comprar}/>
-
+            <h1 style={styles.Tittle}> Ventas de juegos de PS3/PS4/XBOX </h1>
             
+            
+            <ItemListContainer  numeroTelefono= '1128054858' />
+
+            <ItemCount stock={10} onAdd={onAdd}/>
            
            
         </>
@@ -35,15 +40,17 @@ const styles = {
    
     navStyle:{
 
-       
+        background: '#21889C',
         color: '#000',
         textDecoration: 'none',
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
     
     },
     
+   
+
     Tittle:{
         
         fontSize: '50',
