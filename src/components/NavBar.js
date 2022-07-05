@@ -20,7 +20,7 @@ const NavBar = () => {
                 <Cartwidget />
             </nav>
             
-            <h1 style={styles.Tittle}> Ventas de juegos de PS3/PS4/XBOX </h1>
+            <h1 style={styles.Tittle}> Ventas de juegos de PS3/PS4/PS5/XBOX </h1>
             
             
             

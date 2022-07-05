@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import React, {useState} from 'react'
+import './item/Item'
 
- const  ItemCount = ({stock,onAdd, initial= 0}) => {
+
+ export const  ItemCount = ({stock,onAdd, initial= 0}) => {
   
   const [contador, setContador] = useState(initial)
+
+  
     
   const agregar = () => {
     if(contador < stock){
@@ -25,6 +28,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
         <button style={styles.Boton} onClick={quitar}>-</button>
         <h1>{contador}</h1>
         <button style={styles.Boton}onClick={agregar}>+</button>
+        
+       
     </div>
     <button style={styles.Comprar} onClick={() =>{onAdd(contador);}}>Comprar</button>
 
@@ -53,13 +58,7 @@ const styles={
         background: '#33E0FF'
         
 
-    },
-    Boton:{
-
-      
-
     }
-
     
 
 }
