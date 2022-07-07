@@ -14,5 +14,5 @@ const Products = [
       }else{
         reject('salio mal :(')
       }
-    },3000)
+    },2000)
   })
