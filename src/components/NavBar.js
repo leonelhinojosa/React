@@ -11,14 +11,16 @@ const NavBar = () => {
     
     return (
         <>
-           
-            <img style={styles.imagen} src={logo} alt="" />
+           <header style={styles.Header}>
+           <img style={styles.imagen} src={logo} alt="" />
             <nav style={styles.navStyle}>
+
                 <a style={styles.navStyle}href="inicio">Inicio</a>
                 <a style={styles.navStyle}href="ofertas">Ofertas</a>
                 <a style={styles.navStyle}href="consultas">Consultas</a>
                 <Cartwidget />
             </nav>
+            </header>
             
             <h1 style={styles.Tittle}> Ventas de juegos de PS3/PS4/PS5/XBOX </h1>
             
@@ -32,8 +34,15 @@ export default NavBar
 
 const styles = {
    
-    navStyle:{
+    Header:{
+        
+        background: '#21889C'
 
+
+    },
+
+    navStyle:{
+       
         background: '#21889C',
         color: '#000',
         textDecoration: 'none',
@@ -53,7 +62,7 @@ const styles = {
     },
 
     imagen:{
-
+        marginRight: '70%',
         width: '10%',
 
     },
