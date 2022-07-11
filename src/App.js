@@ -6,17 +6,33 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
 function App() {
   
   
   
   
   return (
-    <>
-    <NavBar   />
-    <ItemListContainer  numeroTelefono= '1128054858' />
-    <ItemDetailContainer />
-    </>
+  
+    <BrowserRouter>
+    <NavBar />
+    <Routes>
+      <Route path="/" element={<ItemListContainer />} />
+      <Route path='/juegos/:juegosId' element = {<ItemListContainer/>}/>
+        <Route path='/detalle/:detalleId' element = {<ItemDetailContainer/>}/>
+      
+    
+      
+    </Routes>
+   {/* <ItemListContainer  /> */}
+    
+    </BrowserRouter>
+    
   );
 }
 

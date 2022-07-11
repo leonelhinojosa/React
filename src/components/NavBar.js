@@ -1,8 +1,8 @@
 import React from "react"
 //import './NavBar.css'
 import logo from '../assets/logo.jpg'
-import Cartwidget from '../components/CartWidget'
-
+import Cartwidget from './CartWidget'
+import { Link, NavLink } from "react-router-dom"
 
 
 const NavBar = () => {
@@ -12,13 +12,16 @@ const NavBar = () => {
     return (
         <>
            <header style={styles.Header}>
-           <img style={styles.imagen} src={logo} alt="" />
-            <nav style={styles.navStyle}>
 
-                <a style={styles.navStyle}href="inicio">Inicio</a>
-                <a style={styles.navStyle}href="ofertas">Ofertas</a>
-                <a style={styles.navStyle}href="consultas">Consultas</a>
-                <Cartwidget />
+            <Link to="/"><img style={styles.imagen} src={logo} alt="" /></Link>
+           
+            <nav style={styles.navStyle}>
+                
+                <NavLink style={styles.navStyle}to='/'>Inicio</NavLink>
+                <NavLink style={styles.navStyle}to='/juegos/otros'>Ofertas</NavLink>
+                <NavLink style={styles.navStyle}to='/juegos/Consultas'>Consultas</NavLink>
+               
+               <NavLink to="/CartWidget"> <Cartwidget /> </NavLink>
             </nav>
             </header>
             
