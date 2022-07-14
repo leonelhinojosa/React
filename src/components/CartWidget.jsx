@@ -8,7 +8,7 @@ const CartWidget = () => {
         <>
             
            < img src={Cart} style={styles.Cart} alt="shopping cart" />
-        
+            
 
         
         </>

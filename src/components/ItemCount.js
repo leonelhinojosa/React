@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './item/Item'
 
 
- export const  ItemCount = ({stock,onAdd, initial= 0}) => {
+ export const  ItemCount = ({stock,onAdd, initial= 1}) => {
   
   const [contador, setContador] = useState(initial)
 
