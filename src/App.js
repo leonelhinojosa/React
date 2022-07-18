@@ -11,6 +11,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import CartProvider from "./Context/CartContext";
+
 
 function App() {
   
@@ -21,6 +23,7 @@ function App() {
   
     <BrowserRouter>
     <NavBar />
+    <CartProvider>
     <Routes>
       <Route path="/" element={<ItemListContainer />} />
       <Route path='/juegos/:juegosId' element = {<ItemListContainer/>}/>
@@ -31,6 +34,7 @@ function App() {
       
     </Routes>
    {/* <ItemListContainer  /> */}
+   </CartProvider>
     
     </BrowserRouter>
     
