@@ -1,7 +1,7 @@
 import React from "react"
 //import './NavBar.css'
 import logo from '../assets/logo.jpg'
-import Cartwidget from './CartWidget'
+import Cartwidget from './CartWidget/CartWidget'
 import { Link, NavLink } from "react-router-dom"
 
 
@@ -21,7 +21,7 @@ const NavBar = () => {
                 <NavLink style={styles.navStyle}to='/juegos/otros'>Ofertas</NavLink>
                 <NavLink style={styles.navStyle}to='/juegos/Consultas'>Consultas</NavLink>
                
-               <NavLink to="/CartWidget"> <Cartwidget /> </NavLink>
+               <NavLink style={styles.navStyle}to="/Cart"> <Cartwidget /> </NavLink>
             </nav>
             </header>
             

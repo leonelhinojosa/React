@@ -17,7 +17,7 @@ export const ItemDetail = ({ data }) => {
 
         <div className="container">
             <div className='detail'>
-                <img className='detail__image' src={data.image} alt="" />
+                <img className='detail__image' src={data.img} alt="" />
                 <div className='content'>
                     <h1>{data.tittle}</h1>
                     <h2>{data.price}</h2>
@@ -29,7 +29,7 @@ export const ItemDetail = ({ data }) => {
                     <p className='descarga'>{data.descarga}</p>
                     <p className='guia'>{data.guia}</p>
                     <p className='entrega'>{data.entrega}</p>
-                    <button className='boton'>Comprar</button>
+                    
                     {
                         goToCart ? <Link to='/CartWidget'>Terminar Compra</Link>
                         : <ItemCount initial={1} stock={5} onAdd={onAdd} />
