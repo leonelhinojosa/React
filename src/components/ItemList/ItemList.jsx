@@ -1,7 +1,7 @@
 import React from 'react'
 import Item from '../item/Item'
 
-const ItemList = ({productList}) => {
+export const ItemList = ({productList}) => {
     // const {productList}=props
   return (
     <div>
