@@ -6,13 +6,13 @@ const Item = ({product}) => {
   const nombre = useContext(CartContext)
   console.log('Item', nombre)
   console.log(product)
-  const {img, name, description,price}= product
+  const {img, category, description,price}= product
   
   return (
     <div className="card" style={{width:'20rem', margin:'.5rem'}}>
-     <img src={img}className="card-img-top" alt={name}/>
+     <img src={img}className="card-img-top" alt={category}/>
      <div className="card-body">
-         <p className="card-text">{name}</p>
+         <p className="card-text">{category}</p>
          <p className="card-text">{description}</p>
          <p>{price}</p>
      </div>
