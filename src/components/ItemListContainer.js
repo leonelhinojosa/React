@@ -51,6 +51,35 @@ export const Datos = ({greeting}) => {
         /*getDocs(queryCollection)
         .then(res => SetData(res.docs.map(product => ({ id: product.id, ...product.data()}))))/*/
         getData.then(res => setProductList(res) );
+
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
+import ItemList from '../components/ItemList/ItemList'
+
+import {useParams} from 'react-router-dom';
+
+
+export const Datos = ({greeting}) => {
+  
+  const [data, setData] = useState ([])
+  const {juegosId} = useParams();
+    
+  
+  
+    useEffect(()=>{
+      const querydb = getFirestore();
+      const queryCollection = collection(querydb, 'productos')
+
+      if (juegosId){
+
+        const queryFilter = query(queryCollection, where('category', '==', juegosId))
+        getDocs(queryFilter)
+        .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data()}))))
+        
+      }else{
+        getDocs(queryCollection)
+        .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data()}))))
+        
+
       }
       getProducts()
     },[juegosId])
@@ -60,15 +89,20 @@ export const Datos = ({greeting}) => {
   return (
     <>
       <h1>{greeting}</h1>
+
       
       {loading ? <p>Cargando...</p> : <ItemList productList={productList}/> }
+
+      <ItemList data={data} />
+
     </>
   )
-}
+}}
+
 
 export default Datos
 
 
 
-
+      
    

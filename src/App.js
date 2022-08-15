@@ -20,14 +20,14 @@ function App() {
     <CartProvider>
     <NavBar />
     <Routes>
-      <Route path="/" element={<ItemListContainer />} />
+      <Route path='/' element={<ItemListContainer />} />
       <Route path='/juegos/:juegosId' element = {<ItemListContainer/>}/>
       <Route path='/detalle/:detalleId' element = {<ItemDetailContainer/>}/>
       <Route path='/cart' element={<Cart />} />
     
       
     </Routes>
-   {/* <ItemListContainer  /> */}
+   
    </CartProvider>
     
     </BrowserRouter>

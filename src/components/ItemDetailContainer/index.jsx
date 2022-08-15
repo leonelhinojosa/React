@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { getFirestore, doc, getDoc } from 'firebase/firestore'
 import ItemDetail from '../itemDetail'
 import { useParams } from 'react-router-dom'
-import { getFirestore, doc, getDoc } from 'firebase/firestore'
+
 
 
 const oferta = [
@@ -12,11 +13,17 @@ const oferta = [
     {id:'05',name: 'oferta', juegos: 'otros', description:"Combo Battlefield 3-4 y hardline",   img:'https://dixgamer.com/wp-content/uploads/2022/05/combo-battlefield-3-4-y-hardline.jpg', price:'$300usd', stock: 4,tittle: "Grand Theft Auto V Digital",  subtittle: "Lo que tenés que saber de este producto", genero: "Genero: Disparos", parrafo: 'Esta entrega de la saga combina historia y jugabilidad de una forma totalmente nueva y permite a los jugadores asumir un rol dentro del juego como estafador callejero, ex convicto o maníaco para construir su propio imperio criminal en una ciudad en decadencia.', peso: 'Peso: 44.86 GB', textos:'Textos en español', idioma:'Idioma: Ingles', juego:'Juego Original y Completo',descarga:'>Descarga desde tu consola', guia:'>incluye guia paso a paso', entrega:'>Entrega inmediata',},
   ]
 
+
+
+
 export const ItemDetailContainer = () =>{
 
-    const [data, Setdata] =useState({})
+    const [data, setData] =useState({})
+
     const { detalleId } = useParams();
+
     useEffect(()=> {
+
         /*const querydb = getFirestore()
         const queryDoc = doc(querydb, 'products', detalleId)
         getDoc(queryDoc)
@@ -26,7 +33,13 @@ export const ItemDetailContainer = () =>{
                 resolve(oferta)
             }, 1000);
         })
-        getData.then(res => Setdata(res.find(product => product.id === detalleId)) );
+        getData.then(res => setData(res.find(product => product.id === detalleId)) );
+
+        const querydb = getFirestore()
+        const queryDoc = doc(querydb, 'productos', detalleId)
+        getDoc(queryDoc)
+            .then(res => setData({id: res.id, ...res.data() }))
+
 
 
     },[detalleId])
@@ -37,7 +50,8 @@ export const ItemDetailContainer = () =>{
 
     )
 
-    }
+}
+
 
 
 export default ItemDetailContainer
