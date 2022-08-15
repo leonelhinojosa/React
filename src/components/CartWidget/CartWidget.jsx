@@ -16,13 +16,4 @@ const { totalProducts } = useCartContext()
 
 export default CartWidget
 
-//const styles = {
 
-   // Cart:{
-        
-      //  width: '20%',
-
- //   },
-
-
-//}
