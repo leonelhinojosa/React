@@ -32,7 +32,7 @@ const CartProvider = ({ children }) => {
     const totalProducts = () => cart.reduce((acumulador, productoactual)=> acumulador + productoactual.quantity, 0 )
     const clearCart = () => setCart([]);
     const isInCart = (id) => cart.find(product => product.id === id) ?true : false;
-    const removeProduct =(id) => setCart([cart.filter(product => product.id !== id)]);
+    const removeProduct = (id) => setCart(cart.filter(producto => producto.id !== id));
 
 
     return(

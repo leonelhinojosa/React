@@ -25,7 +25,7 @@ import './item/Item'
     <>
     <div style={styles.Div}>
         
-        <button style={styles.Boton} onClick={quitar}>-</button>
+        <button style={styles.Quitar} onClick={quitar}>-</button>
         <h1>{contador}</h1>
         <button style={styles.Boton}onClick={agregar}>+</button>
         
@@ -51,10 +51,15 @@ const styles={
         
        
     } ,
+
+    Quitar:{
+
+        width: '15px'
+    },
     
     Comprar:{
         marginTop: '1%',
-        marginLeft: '48.4%',
+        marginLeft: '47%',
         background: '#33E0FF'
         
 

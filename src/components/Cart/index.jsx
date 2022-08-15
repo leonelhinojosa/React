@@ -1,5 +1,5 @@
 import React from "react";
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+
 import { useCartContext } from "../../Context/CartContext";
 import { Link } from "react-router-dom";
 import ItemCart from '../ItemCart'
