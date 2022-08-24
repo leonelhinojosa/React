@@ -27,7 +27,7 @@ import './item/Item'
         
         <button style={styles.Quitar} onClick={quitar}>-</button>
         <h1>{contador}</h1>
-        <button style={styles.Boton}onClick={agregar}>+</button>
+        <button style={styles.Agregar}onClick={agregar}>+</button>
         
        
     </div>
@@ -46,22 +46,27 @@ const styles={
         alignItems: 'center',
         JustifyContent: 'space-between',
         marginTop: '2%',
-        marginLeft: '48.5%',
+        marginLeft: '15.5%',
         
         
        
     } ,
 
     Quitar:{
-
-        width: '15px'
+      borderRadius: '10px',
+        width: '80px'
     },
-    
-    Comprar:{
+
+    Agregar:{
+      borderRadius: '10px',
+      width: '80px'
+    },
+    Comprar:{ 
+      width: '80px',
         marginTop: '1%',
-        marginLeft: '47%',
-        background: '#33E0FF'
-        
+        marginLeft: '24%',
+        background: '#33E0FF',
+        borderRadius: '10px',
 
     }
     

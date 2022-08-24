@@ -3,6 +3,7 @@ import './itemDetail.css'
 import ItemCount from '../ItemCount'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../../Context/CartContext' 
+
 export const ItemDetail = ({ data }) => {
     const [goToCart, setGoToCart] = useState(false)
     const {addProduct} = useCartContext();
@@ -17,18 +18,15 @@ export const ItemDetail = ({ data }) => {
 
         <div className="container">
             <div className='detail'>
-                <img className='detail__image' src={data.img} alt="" />
+                <img className='detail__image' src={data.image} alt="" />
                 <div className='content'>
-                    <h1>{data.tittle}</h1>
-                    <h2>{data.price}</h2>
-                    <p className='genero'>{data.genero}</p>
-                    <p className='peso'>{data.peso}</p>
-                    <p className='idioma'>{data.idioma}</p>
-                    <p className='textos'>{data.textos}</p>
-                    <p className='juego'>{data.juego}</p>
-                    <p className='descarga'>{data.descarga}</p>
-                    <p className='guia'>{data.guia}</p>
-                    <p className='entrega'>{data.entrega}</p>
+                    <h3>Titulo: {data.description}</h3>
+                    <h3>Precio ${data.price}</h3>
+                    <h3>Idioma: Ingles</h3>
+                    <h3>Descarga: Desde tu consola</h3>
+                    
+                 
+                  
                     
                     {
                         goToCart ? <Link to='/CartWidget'>Terminar Compra</Link>
