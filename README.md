@@ -3,9 +3,9 @@
 Este es un proyecto desarrollado con la finalidad de vender Juegos Digitales.
 El mismo es realizado como entrega del proyecto final para el curso de React-Js dictado por CoderHouse.
 
-[Deploy en Netlify]()
+[Deploy en Netlify](https://game-shop-ff5bf6.netlify.app/)
 
-![image](proyectoMuestra.gif)
+![image](proyecto-final.gif)
 
 ### Uso/instalación
 
