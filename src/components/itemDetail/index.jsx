@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './itemDetail.css'
 import ItemCount from '../ItemCount'
 import { Link } from 'react-router-dom'
-import { useCartContext } from '../../Context/CartContext' 
+import { useCartContext } from '../../cartContext/cartContext' 
 
 export const ItemDetail = ({ data }) => {
     const [goToCart, setGoToCart] = useState(false)
@@ -29,7 +29,7 @@ export const ItemDetail = ({ data }) => {
                   
                     
                     {
-                        goToCart ? <Link to='/CartWidget'>Terminar Compra</Link>
+                        goToCart ? <Link to='/Cart'>Terminar Compra</Link>
                         : <ItemCount initial={1} stock={5} onAdd={onAdd} />
 
                         
