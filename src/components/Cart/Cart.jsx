@@ -52,7 +52,7 @@ const Cart = () => {
     if(cart.length === 0){
            return(
                <div className='centrar'>
-                   <p>No hay elementos en el carrito</p>
+                   <p className="elementos">No hay elementos en el carrito</p>
                   <Link to='/'><button>Comprar Entradas</button></Link>
                </div>
            );
